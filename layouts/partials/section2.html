@@ -1,0 +1,26 @@
+{{- $section2 := .Site.Params.section2 }}
+{{- $title    := index $section2 "title" }}
+{{- $subtitle := index $section2 "subtitle" }}
+{{- $features := index $section2 "features" }}
+<section class="section is-medium" id="section2">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">{{ $title }}</h1>
+        <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+        <div class="divider"></div>
+  <div class="container">
+            <div class="content">
+              <p>Andrea got a PhD in Physics and Astrophysics from the University of Milan in 2009 and then moved to the US. He has been staff at the San Diego Supercomputer Center since 2013, currently Lead of the Scientific Computing Applications group, helping scientists all over the US to use high-perfomance computing resources efficiently for their research.
+              </p>
+<p>Andrea has been using Python since 2010 and has been teaching "Python for HPC" at the San Diego Supercomputer Center Summer Institute since 2014, he is an expert in distributed computing with Python. He has also been working on deployments and administration of Kubernetes clusters as part of his collaboration with the Jetstream Openstack cloud team.</p>
+
+<p>During graduate school he started working as a Web Developer, and ever since he has been building custom web applications to help business automate their workflows integrating with their internal databases, document stores and email systems.</p>
+
+<p>Andrea develops AI systems using CNN (Convolutional Neural Networks) and LLM (Large Language Models) both in his role at UCSD and for businesses as a consultant.</p>
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,3 @@
+[submodule "themes/darths-hugo-shortcodes"]
+	path = themes/darths-hugo-shortcodes
+	url = https://github.com/Darthagnon/darths-hugo-shortcodes

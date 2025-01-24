@@ -1,6 +1,6 @@
-baseURL: http://something-fresh.org/
+baseURL: https://sandiegodata.science
 languageCode: en-us
-title: Hugo Fresh Theme
+title: San Diego Data Science
 
 module:
   # uncomment line below for local development of module
@@ -28,21 +28,21 @@ params:
   # preloader: false
   navbarlogo:
   # Logo (from static/images/logos/___)
-    image: logos/fresh.svg
+    image: logos/home.svg
     link: /
     # Default width/height. Uncomment if you need to change
-    # width: 112
-    # height: 28
+    width: 34
+    height: 34
   font:
     name: "Open Sans"
     sizes: [400,600]
   hero:
     # Main hero title
-    title: Manage. Deploy.
+    title: San Diego Data Science LLC
     # Hero subtitle (optional)
-    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
+    subtitle: by Andrea Zonca, PhD - Senior Python developer and Educator
     # Button text
-    buttontext: Get started
+    buttontext: Contact
     # Where the main hero button links to
     buttonlink: "#"
     # Hero image (from static/images/___)
@@ -64,8 +64,8 @@ params:
   navbar:
   - title: Features
     url: /
-  - title: Pricing
-    url: /
+  - title: Python for Teens
+    url: /python-classes-kids
   - title: Dropdown
     sublinks:
     - title: Dropdown item
@@ -74,10 +74,8 @@ params:
       url: /
     - title: Dropdown item
       url: /
-  - title: Log in
-    url: /
-  - title: Sign up
-    url: /
+  - title: Contact
+    url: /contact
     button: true
   sidebar:
     # Logo (from static/images/logos/___.svg)

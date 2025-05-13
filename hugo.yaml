@@ -46,7 +46,7 @@ params:
     # Where the main hero button links to
     buttonlink: "/contact"
     # Hero image (from static/images/___)
-    image: illustrations/andrea_comet.jpg
+    image: 'Sunset Over Server City.png'
     # Footer logos (from static/images/logos/clients/*.svg)
     # urls are optional
   # Customizable navbar. For a dropdown, add a "sublinks" list.

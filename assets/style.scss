@@ -152,11 +152,11 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.section-heading .title {
-  margin-bottom: 0.25rem;
+.section-heading h2.title.is-2 {
+  margin-bottom: 0.5rem;
 }
 
-.section-heading .subtitle {
+.section-heading h2.title.is-2 + p.subtitle.is-5 {
   margin-top: 0;
 }
 

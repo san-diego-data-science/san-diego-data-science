@@ -4,20 +4,18 @@
 {{- else }}
   {{ $inServerMode = .Site.IsServer }}
 {{- end }}
-{{- $sass         := "style.sass" }}
-{{- $cssTarget    := "css/style.css" }}
+{{- $sass         := "style.scss" }}
+{{- $cssTarget    := "css/site.css" }}
 {{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-{{- $fontName     := .Site.Params.font.name | default "Open Sans" }}
-{{- $fontFace     := replace $fontName " " "+" }}
-{{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
-{{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes }}
 <link rel="icon" type="image/x-icon" href='{{ "images/SanDiegoDataScience.ico" | relURL }}' />
-<link href="{{ $fontUrl }}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 {{- if $inServerMode }}
-{{- $css := resources.Get $sass | toCSS $cssOpts }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
+  {{- $css := resources.Get $sass | toCSS $cssOpts }}
+  <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 {{- else }}
-{{- $css := resources.Get $sass | toCSS $cssOpts | minify | fingerprint }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{- $css := resources.Get $sass | toCSS $cssOpts | minify | fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
-<link rel="stylesheet" type="text/css" href="{{ "css/icons.css" | relURL }}">

@@ -1,51 +1,31 @@
-{{- $footer      := .Site.Params.footer }}
-{{- $logo        := index $footer "logo" }}
-{{- $quickLinks  := index $footer "quicklinks" }}
+{{- $footer := .Site.Params.footer }}
+{{- $quickLinks := index $footer "quicklinks" }}
 {{- $socialMedia := index $footer "socialmedia" }}
-{{- $bulmaLogo   := index $footer "bulmalogo" }}
-{{- $socialMediaTitle    := index $footer "socialmediatitle" }}
-<footer class="footer footer-dark">
-  <div class="container">
-    <div class="columns">
-      {{- range $quickLinks }}
-        <div class="column">
-          <div class="footer-column">
-            <div class="footer-header">
-                <h3>{{ .title }}</h3>
-            </div>
-            <ul class="link-list">
-              {{- range .links }}
-              <li>
-                <a href="{{ .link }}">
-                  {{ .text }}
-                </a>
-              </li>
-              {{- end }}
-            </ul>
-          </div>
-        </div>
-      {{- end }}
-      <div class="column">
-        <div class="footer-column">
-          <div class="footer-header">
-            <h3>{{ $socialMediaTitle }}</h3>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                {{- range $socialMedia }}
-                <a class="level-item" href="{{ .link }}">
-                  <span class="icon"><i class="fa fa-{{ .icon }}"></i></span>
-                </a>
-                {{- end }}
-              </div>
-            </nav>
-
-            {{- if $bulmaLogo }}
-            <a href="https://bulma.io" target="_blank">
-              <img src="{{ "images/logos/made-with-bulma.png" | relURL }}" alt="Made with Bulma" width="128" height="24">
-            </a>
-            {{- end }}
-          </div>
-        </div>
+{{- $column1 := index $quickLinks "column1" }}
+<footer class="footer">
+  <div class="container narrow">
+    <div class="columns is-variable is-7">
+      <div class="column is-5">
+        <p class="eyebrow">San Diego Data Science</p>
+        <p class="muted">Python engineering, cloud architecture, and AI systems built with care for teams that need to ship.</p>
+      </div>
+      <div class="column is-4">
+        {{- with $column1 }}
+        <p class="foot-title">{{ .title }}</p>
+        <ul class="list-plain">
+          {{- range .links }}
+          <li><a href="{{ .link }}">{{ .text }}</a></li>
+          {{- end }}
+        </ul>
+        {{- end }}
+      </div>
+      <div class="column is-3">
+        <p class="foot-title">{{ $footer.socialmediatitle }}</p>
+        <ul class="list-plain">
+          {{- range $socialMedia }}
+          <li><a href="{{ .link }}">{{ title .icon }}</a></li>
+          {{- end }}
+        </ul>
       </div>
     </div>
   </div>

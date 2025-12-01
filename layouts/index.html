@@ -1,37 +1,125 @@
 {{ define "main" }}
+  {{- $hero := .Site.Params.hero }}
+  {{- $section1 := .Site.Params.section1 }}
+  {{- $section2 := .Site.Params.section2 }}
+  {{- $section3 := .Site.Params.section3 }}
+  {{- $buttonText := index $hero "buttontext" }}
+  {{- $buttonLink := index $hero "buttonlink" }}
 
-    {{ if .Site.Params.hero }}
-    {{ partial "hero.html" . }}
-    {{ end }}
+  <section class="hero is-gradient">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered is-variable is-7">
+          <div class="column is-6">
+            <p class="eyebrow">Consulting &amp; education</p>
+            <h1 class="title is-1">{{ $hero.title }}</h1>
+            {{ with $hero.subtitle }}
+            <p class="subtitle is-4 hero-lead">{{ . }}</p>
+            {{ end }}
+            <div class="buttons">
+              <a class="button is-primary is-medium" href="{{ $buttonLink }}">{{ $buttonText }}</a>
+              <a class="button is-light is-medium is-outlined" href="#services">View services</a>
+            </div>
+            {{ with $section1.tiles }}
+            <div class="tag-row">
+              {{ range . }}
+              <span class="tag is-soft">{{ .title }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+          <div class="column is-5 is-offset-1">
+            <div class="hero-panel">
+              <p class="is-size-5 has-text-weight-semibold">Built-to-fit data systems</p>
+              <p class="muted">Hands-on delivery locally in San Diego or remote.</p>
+              <div class="about-notes">
+                <div>
+                  <p class="has-text-weight-semibold">Cloud &amp; Kubernetes</p>
+                  <p class="muted">Certified administrator and developer for reliable infrastructure.</p>
+                </div>
+                <div>
+                  <p class="has-text-weight-semibold">AI engineering</p>
+                  <p class="muted">Modern LLM and CNN workflows tuned for your data and users.</p>
+                </div>
+              </div>
+              <figure class="image is-3by2 hero-visual">
+                <img src="{{ "images/sandiegodata_science_hero.png" | relURL }}" alt="Data science consulting in San Diego">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    {{ partial "flyer-pythonai2.html" . }}
+  <section class="section" id="services">
+    <div class="container narrow">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2 class="title is-2">{{ $section1.title }}</h2>
+        <p class="subtitle is-5">{{ $section1.subtitle }}</p>
+      </div>
+      <div class="columns is-multiline is-variable is-5">
+        {{ range $section1.tiles }}
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="service-card">
+            <p class="service-title">{{ .title }}</p>
+            <p class="muted">{{ .text }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
 
-    {{ if .Site.Params.section1 }}
-    {{ partial "section1.html" . }}
-    {{ end }}
+  <section class="section about-section" id="about">
+    <div class="container narrow">
+      <div class="columns is-variable is-7 is-vcentered">
+        <div class="column">
+          <p class="eyebrow">About Andrea</p>
+          <h2 class="title is-3">{{ $section2.title }}</h2>
+          <p class="subtitle is-5">{{ $section2.subtitle }}</p>
+          <div class="box">
+            <div class="content">
+              <p>Andrea got a PhD in Physics and Astrophysics from the University of Milan in 2009 and then moved to the US. He has been staff at the San Diego Supercomputer Center since 2013, currently Lead of the Scientific Computing Applications group, helping scientists all over the US to use high-perfomance computing resources efficiently for their research.</p>
+              <p>Andrea has been using Python since 2010 and has been teaching "Python for HPC" at the San Diego Supercomputer Center Summer Institute since 2014, he is an expert in distributed computing with Python. He has also been working on deployments and administration of Kubernetes clusters as part of his collaboration with the Jetstream Openstack cloud team.</p>
+              <p>During graduate school he started working as a Web Developer, and ever since he has been building custom web applications to help business automate their workflows integrating with their internal databases, document stores and email systems.</p>
+              <p>Andrea develops AI systems using CNN (Convolutional Neural Networks) and LLM (Large Language Models) both in his role at UCSD and for businesses as a consultant.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-5">
+          <div class="box">
+            <p class="has-text-weight-semibold">Capabilities at a glance</p>
+            <ul class="list-plain">
+              <li>High-performance Python and distributed computing</li>
+              <li>Kubernetes design, deployment, and operations</li>
+              <li>Custom web apps that automate workflows</li>
+              <li>LLM and CNN solutions tuned to real-world data</li>
+            </ul>
+            <p class="muted mt-4">Working alongside research and product teams to ship production-ready systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    {{ if .Site.Params.section2 }}
-    {{ partial "section2.html" . }}
-    {{ end }}
+  {{ partial "flyer-pythonai2.html" . }}
 
-    {{ if .Site.Params.section3 }}
-    {{ partial "section3.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.section4 }}
-    {{ partial "section4.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.section5 }}
-    {{ partial "section5.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.footer }}
-    {{ partial "footer.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.sidebar }}
-    {{ partial "sidebar.html" . }}
-    {{ end }}
-    
+  <section class="section" id="cta">
+    <div class="container narrow">
+      <div class="cta-card">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <p class="eyebrow">Schedule</p>
+            <h3 class="title is-3">{{ $section3.title }}</h3>
+            <p class="subtitle is-5">{{ $section3.subtitle }}</p>
+          </div>
+          <div class="column is-narrow">
+            <a class="button is-light is-medium" href="{{ index $section3 "buttonLink" }}">{{ index $section3 "buttonText" }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {{ end }}

@@ -39,4 +39,4 @@ Secureform.dev leverages **Cloudflare's** world-class infrastructure to provide 
 
 ---
 
-[Visit secureform.dev](https://secureform.dev/){.button .is-primary}
+<a href="https://secureform.dev/" class="button is-primary is-medium">Visit secureform.dev</a>

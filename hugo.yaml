@@ -44,15 +44,19 @@ params:
     # Button text
     buttontext: Contact
     # Where the main hero button links to
-    buttonlink: "/contact"
+    buttonlink: "https://sandiegodatascience.secureform.dev/contact"
     # Hero image (from static/images/___)
     image: 'sandiegodata_science_hero.jpg'
     # Footer logos (from static/images/logos/clients/*.svg)
     # urls are optional
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
+  - title: secureform.dev
+    url: /secureform
+    icon: logos/secureform-logo-transparent.png
+    button: true
   - title: Contact
-    url: /contact
+    url: https://sandiegodatascience.secureform.dev/contact
     button: true
   section1:
     title: Services
@@ -74,7 +78,7 @@ params:
     title: Schedule your free consultation
     subtitle: Contact me to schedule a free consultation online via Zoom or in-person in San Diego (Kearny Mesa)
     buttonText: Schedule
-    buttonLink: "/contact"
+    buttonLink: "https://sandiegodatascience.secureform.dev/contact"
   footer:
     # Social Media Title
     socialmediatitle: Social Media
@@ -90,6 +94,8 @@ params:
       column1:
         title: "Blog"
         links:
+        - text: secureform.dev
+          link: /secureform
         - text: zonca.dev
           link: https://zonca.dev
         - text: zonca.dev - posts about Kubernetes

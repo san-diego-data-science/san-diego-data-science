@@ -29,7 +29,14 @@
       <div class="navbar-end">
         {{- range $navbarItems }}
         <div class="navbar-item">
-          <a class="button is-primary is-rounded" href="{{ .url }}">{{ .title }}</a>
+          <a class="button is-primary is-rounded" href="{{ .url }}">
+            {{- if .icon }}
+            <span class="icon">
+              <img src="{{ printf "images/%s" .icon | relURL }}" alt="{{ .title }}" style="max-height: 1.5rem;">
+            </span>
+            {{- end }}
+            <span>{{ .title }}</span>
+          </a>
         </div>
         {{- end }}
       </div>

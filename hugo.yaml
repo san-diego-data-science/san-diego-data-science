@@ -51,10 +51,6 @@ params:
     # urls are optional
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: secureform.dev
-    url: /secureform
-    icon: logos/secureform-logo-transparent.png
-    button: true
   - title: Contact
     url: https://sandiegodatascience.secureform.dev/contact
     button: true

@@ -8,7 +8,6 @@ At **San Diego Data Science LLC**, we value your privacy and are committed to pr
 ### 1. Information We Collect
 We collect personal information that you voluntarily provide to us when you:
 - Fill out a contact form or inquiry.
-- Schedule a consultation via our booking links.
 - Use our **secureform.dev** service.
 
 This information may include:
@@ -34,16 +33,15 @@ We take security seriously and implement industry-standard measures to protect y
 We may use third-party tools to facilitate our services, such as:
 - **Cloudflare** for web hosting and security.
 - **Google Sheets** for data management in certain workflows.
-- **TidyCal** or other booking tools for scheduling.
 These third parties have their own privacy policies governing how they handle your data.
 
 ### 5. Your Rights
-Depending on your location, you may have rights regarding your personal information, including the right to access, correct, or delete your data. To exercise these rights, please contact us at **andrea@sandiegodata.science**.
+Depending on your location, you may have rights regarding your personal information, including the right to access, correct, or delete your data. To exercise these rights, please contact us at **zonca@sandiegodata.science**.
 
 ### 6. Changes to This Policy
 We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.
 
 ### 7. Contact Us
 If you have any questions or concerns about this Privacy Policy, please contact us:
-- **Email:** andrea@sandiegodata.science
+- **Email:** zonca@sandiegodata.science
 - **Website:** [sandiegodata.science](https://sandiegodata.science)

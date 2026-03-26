@@ -88,8 +88,10 @@ params:
     bulmalogo: false
     quicklinks:
       column1:
-        title: "Blog"
+        title: "Links"
         links:
+        - text: Privacy Policy
+          link: /privacy
         - text: secureform.dev
           link: /secureform
         - text: zonca.dev

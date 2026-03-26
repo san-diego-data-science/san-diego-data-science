@@ -1,6 +1,6 @@
 ---
-title: "Privacy Policy"
-description: "Privacy Policy for San Diego Data Science LLC"
+title: "Privacy"
+description: "Privacy for San Diego Data Science LLC"
 ---
 
 At **San Diego Data Science LLC**, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the data you provide to us through our website.

@@ -90,7 +90,7 @@ params:
       column1:
         title: "Links"
         links:
-        - text: Privacy Policy
+        - text: Privacy
           link: /privacy
         - text: secureform.dev
           link: /secureform

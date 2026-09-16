@@ -9,7 +9,7 @@ description: "Modern, mobile-first digital forms for your business, powered by C
   </div>
   <div class="column">
     <h2 class="title is-3">Secureform.dev</h2>
-    <p class="subtitle is-5">A service from <strong>San Diego Data Science LLC</strong> powered by <strong>Cloudflare</strong>.</p>
+    <p class="subtitle is-5">A service from <strong>Zonca AI Consulting</strong> powered by <strong>Cloudflare</strong>.</p>
   </div>
 </div>
 

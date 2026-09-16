@@ -1,32 +1,5 @@
-{{- $footer := .Site.Params.footer }}
-{{- $quickLinks := index $footer "quicklinks" }}
-{{- $socialMedia := index $footer "socialmedia" }}
-{{- $column1 := index $quickLinks "column1" }}
-<footer class="footer">
+<footer class="footer transition-footer">
   <div class="container narrow">
-    <div class="columns is-variable is-7">
-      <div class="column is-5">
-        <p class="eyebrow">San Diego Data Science</p>
-        <p class="muted">Python engineering, cloud architecture, and AI systems built with care for teams that need to ship.</p>
-      </div>
-      <div class="column is-4">
-        {{- with $column1 }}
-        <p class="foot-title">{{ .title }}</p>
-        <ul class="list-plain">
-          {{- range .links }}
-          <li><a href="{{ .link }}">{{ .text }}</a></li>
-          {{- end }}
-        </ul>
-        {{- end }}
-      </div>
-      <div class="column is-3">
-        <p class="foot-title">{{ $footer.socialmediatitle }}</p>
-        <ul class="list-plain">
-          {{- range $socialMedia }}
-          <li><a href="{{ .link }}">{{ title .icon }}</a></li>
-          {{- end }}
-        </ul>
-      </div>
-    </div>
+    <p><strong>San Diego Data Science LLC is now <a href="https://www.zonca.dev/ai/">Zonca AI Consulting</a>.</strong></p>
   </div>
 </footer>

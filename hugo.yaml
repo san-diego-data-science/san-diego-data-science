@@ -1,6 +1,6 @@
 baseURL: https://sandiegodata.science
 languageCode: en-us
-title: San Diego Data Science
+title: San Diego Data Science LLC
 
 module:
   # uncomment line below for local development of module
@@ -38,21 +38,21 @@ params:
     sizes: [400,600]
   hero:
     # Main hero title
-    title: San Diego Data Science LLC
+    title: San Diego Data Science LLC is now Zonca AI Consulting
     # Hero subtitle (optional)
-    subtitle: by Andrea Zonca, PhD - Senior Python developer and Educator
+    subtitle: The consulting work continues under a new public name, with the same focus on practical artificial intelligence, scientific computing, and business automation.
     # Button text
-    buttontext: Contact
+    buttontext: Visit Zonca AI Consulting
     # Where the main hero button links to
-    buttonlink: "https://sandiegodatascience.secureform.dev/contact"
+    buttonlink: "https://www.zonca.dev/ai/"
     # Hero image (from static/images/___)
     image: 'sandiegodata_science_hero.jpg'
     # Footer logos (from static/images/logos/clients/*.svg)
     # urls are optional
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Contact
-    url: https://sandiegodatascience.secureform.dev/contact
+  - title: Visit Zonca AI Consulting
+    url: https://www.zonca.dev/ai/
     button: true
   section1:
     title: Services
@@ -74,7 +74,7 @@ params:
     title: Schedule your free consultation
     subtitle: Contact me to schedule a free consultation online via Zoom or in-person in San Diego (Kearny Mesa)
     buttonText: Schedule
-    buttonLink: "https://sandiegodatascience.secureform.dev/contact"
+    buttonLink: "https://www.zonca.dev/ai/"
   footer:
     # Social Media Title
     socialmediatitle: Social Media

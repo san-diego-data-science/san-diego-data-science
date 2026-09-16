@@ -1,9 +1,9 @@
 ---
 title: "Privacy"
-description: "Privacy for San Diego Data Science LLC"
+description: "Privacy for Zonca AI Consulting"
 ---
 
-At **San Diego Data Science LLC**, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the data you provide to us through our website.
+At **Zonca AI Consulting**, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the data you provide to us through our website.
 
 ### 1. Information We Collect
 We collect personal information that you voluntarily provide to us when you:

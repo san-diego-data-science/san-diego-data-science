@@ -12,6 +12,79 @@
   --hero-bg: #0b1224;
 }
 
+.transition-hero {
+  align-items: center;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(8, 126, 139, 0.28), transparent 30%),
+    linear-gradient(135deg, #071e33, #0b4f6c 66%, #087e8b);
+  display: flex;
+  min-height: calc(100vh - var(--navbar-height));
+  padding: calc(var(--navbar-height) + 4rem) 1.5rem 5rem;
+}
+
+.transition-card {
+  color: #fff;
+  max-width: 900px;
+}
+
+.transition-card .eyebrow {
+  color: #8ce1da;
+}
+
+.transition-card .title,
+.transition-card .subtitle {
+  color: #fff;
+}
+
+.transition-card .title {
+  font-size: clamp(2.5rem, 6vw, 5.2rem);
+  line-height: 1.02;
+  margin: 1rem 0 1.25rem;
+}
+
+.transition-card .subtitle {
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+.transition-card .button,
+.transition-navbar-menu .button {
+  background: #ff5a5f;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.transition-footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.transition-footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .transition-navbar-menu {
+    box-shadow: none;
+    display: block;
+    padding: 0;
+  }
+
+  .transition-navbar-menu .navbar-end {
+    align-items: center;
+    display: flex;
+  }
+
+  .transition-navbar-menu .navbar-item {
+    padding-left: 0;
+  }
+
+  .transition-hero {
+    padding-top: calc(var(--navbar-height) + 7rem);
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 180px;
